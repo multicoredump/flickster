@@ -10,6 +10,7 @@
         android:id="@+id/ivPoster"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
         tools:src="@mipmap/ic_launcher"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
