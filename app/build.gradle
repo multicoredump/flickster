@@ -49,6 +49,4 @@ dependencies {
     // Custome OkHttpDownloader to work with Current version of Picasso
     // reference: https://github.com/square/picasso/issues/1256
     compile 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.0.2'
-
-
 }

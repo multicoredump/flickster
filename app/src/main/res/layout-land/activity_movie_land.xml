@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.coremantra.tutorial.flickster.MovieActivity" >
+    tools:context="com.coremantra.tutorial.flickster.activities.MovieActivity" >
 
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
