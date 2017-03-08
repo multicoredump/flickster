@@ -48,7 +48,7 @@ local.properties
 .classpath
 .settings/
 .loadpath
-
+*.gif
 # External tool builders
 .externalToolBuilders/
 

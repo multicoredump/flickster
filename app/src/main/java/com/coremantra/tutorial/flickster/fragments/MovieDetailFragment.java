@@ -19,6 +19,8 @@ import com.coremantra.tutorial.flickster.R;
 import com.coremantra.tutorial.flickster.models.Movie;
 import com.squareup.picasso.Picasso;
 
+import org.parceler.Parcels;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
@@ -29,7 +31,7 @@ import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
 
 public class MovieDetailFragment extends DialogFragment {
 
-    private static final String SHOW_MOVIE = "show_movie";
+    private static final String MOVIE = "movie";
 
     @BindView(R.id.ivImage)
     ImageView ivImage;
@@ -58,7 +60,7 @@ public class MovieDetailFragment extends DialogFragment {
     public static MovieDetailFragment newInstance(Movie movie) {
         MovieDetailFragment fragment = new MovieDetailFragment();
         Bundle args = new Bundle();
-        args.putSerializable("movie", movie);
+        args.putParcelable(MOVIE, Parcels.wrap(movie));
         fragment.setArguments(args);
         return fragment;
 
@@ -70,7 +72,7 @@ public class MovieDetailFragment extends DialogFragment {
         super.onCreate(savedInstanceState);
         Bundle args = getArguments();
         if (args != null) {
-            movie = (Movie) args.getSerializable("movie");
+            movie = Parcels.unwrap(args.getParcelable(MOVIE));
         }
     }
 

@@ -49,4 +49,13 @@ dependencies {
     // Custome OkHttpDownloader to work with Current version of Picasso
     // reference: https://github.com/square/picasso/issues/1256
     compile 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.0.2'
+
+//    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+//    // Because RxAndroid releases are few and far between, it is recommended you also
+//    // explicitly depend on RxJava's latest version for bug fixes and new features.
+//    compile 'io.reactivex.rxjava2:rxjava:2.0.5'
+
+    // Parceler
+    compile 'org.parceler:parceler-api:1.1.6'
+    annotationProcessor 'org.parceler:parceler:1.1.6'
 }

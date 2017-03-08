@@ -41,6 +41,9 @@ public class MovieActivity extends Activity {
     @BindView(R.id.rvMovies)
     RecyclerView rvMovies;
 
+    OkHttpClient client;
+    Request request;
+
     ItemClickSupport.OnItemClickListener itemClickListener = new ItemClickSupport.OnItemClickListener() {
         @Override
         public void onItemClicked(RecyclerView recyclerView, int position, View v) {
@@ -76,8 +79,8 @@ public class MovieActivity extends Activity {
 
     private void readMoviesData() {
 
-        OkHttpClient client = new OkHttpClient();
-        Request request = new Request.Builder().url(MOVIES_URL).build();
+        client = new OkHttpClient();
+        request = new Request.Builder().url(MOVIES_URL).build();
 
         client.newCall(request).enqueue(new Callback() {
             @Override
@@ -113,5 +116,21 @@ public class MovieActivity extends Activity {
                 e.printStackTrace();
             }
         });
+
+
+//        Observable<Response> response = Observable.fromCallable(new Callable<Response>() {
+//                                                                    @Override
+//                                                                    public Response call() throws Exception {
+//                                                                        return client.newCall(request).execute();
+//                                                                    }
+//                                                                });
+//
+//        response.subscribeOn(Schedulers.io())
+//
+//                .observeOn(AndroidSchedulers.mainThread());
+//
     }
+
+
+
 }

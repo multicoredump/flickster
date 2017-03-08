@@ -3,6 +3,7 @@ package com.coremantra.tutorial.flickster.models;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 /**
  * Created by radhikak on 3/4/17.
  */
-
+@Parcel(analyze = {Movie.class})
 public class Movie implements Serializable{
 
     private String title;
@@ -43,6 +44,9 @@ public class Movie implements Serializable{
     public String getReleaseDate() {
         return releaseDate;
     }
+
+    // empty constructor needed by the Parceler library
+    public Movie() {}
 
     public Movie (JSONObject jsonObject) throws JSONException
     {
