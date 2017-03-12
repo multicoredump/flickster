@@ -164,7 +164,7 @@ public class MovieAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
         }
 
         // use placeholder & rounded corners transformation
-        Picasso.with(context).load(imageURL).fit()
+        Picasso.with(context).load(imageURL)
                 .placeholder(R.drawable.movie_placeholder)
                 .transform(new RoundedCornersTransformation(10, 10))
                 .into(viewHolder.ivPoster);
